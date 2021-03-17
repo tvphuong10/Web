@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{data.title}}</title>
+</head>
+<body>
+    <h1>{{data.title}}</h1>
+    <ul>
+        {% for step in steps %}
+            <li>{{step.step}}</li>
+            {% if step.image %}
+                <img src="{{media_url}}{{ step.image }}" alt="img" height="150px">
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

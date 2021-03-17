@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <a href="/notify">Thông báo</a>
+    <a href="/login">Đăng nhập</a>
+    <a href="/create">Tạo bài viết</a>
+    <h1>đề xuất</h1>
+    <p>test</p>
+    {% block content %}
+    {% for d in data %}
+        <h2>id: {{d.id}} <a href="/{{d.id}}">{{d.title}}</a></h2>
+    {% endfor %}
+    {% endblock %}
+</body>
+</html>
